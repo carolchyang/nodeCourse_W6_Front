@@ -1,0 +1,24 @@
+.navTab {
+  .nav {
+    margin-left: 1rem;
+  }
+  .nav-link {
+    background-color: $white;
+    border: 2px solid $dark;
+    border-bottom: 0;
+    &:hover:not(.active) {
+      background-color: $secondary;
+    }
+  }
+}
+
+.navTabContent {
+  background: $white;
+  border: 2px solid $dark;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow-sm;
+  .tab-pane {
+    max-width: 31.25rem;
+    margin: 0 auto;
+  }
+}

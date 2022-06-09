@@ -1,0 +1,55 @@
+.card {
+  position: relative;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  background: $white;
+  border: 2px solid $dark;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow-sm;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.customList {
+  &:before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba($secondary, 0.4);
+    z-index: 99;
+  }
+  &.disabled {
+    pointer-events: none;
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.cardCloseBtn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: rgba($danger, 0.4);
+  font-size: 1.5rem;
+  transition: all 0.15s ease-in-out;
+  &:hover,
+  &:focus {
+    color: $danger;
+  }
+}
+
+.cardImgLink {
+  color: $dark;
+  &:hover {
+    color: $primary;
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
